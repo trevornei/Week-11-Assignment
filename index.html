@@ -11,33 +11,57 @@
 </head>
     <body class="w-screen h-screen bg-slate-950 flex items-center justify-center">
         <!--The main container that houses the game.-->
-        <main class="flex flex-col items-center justify-center w-2/3 h-5/6 bg-ashgray rounded-3xl">
+        <main class="flex flex-col items-center justify-center w-2/3 h-3/4 bg-ashgray rounded-3xl">
         <!--Game Title-->
             <div id="header" class="w-5/6 h-20 flex flex-col text-center">
                 <h1 class="text-4xl">Tic Tac Toe</h1>
-                <h4 class="text-xl">Player Turn</h4>
                 <!--Who's Turn?-->
+                <h4 class="text-xl">Player Turn</h4>
             </div>
         <!--Tailwind Grid: Game Tiles-->
             <!--This container uses css grid(3cols & 3rows)-->
-            <div id="board" class="w-5/6 h-1/2 grid grid-cols-3 grid-rows-3 gap-3 mx-auto p-4 m-4 bg-teagreen shadow-xl shadow-emerald-900  text-center content-center rounded-xl">
+            <div id="board" class="w-5/6 h-1/2 grid grid-cols-3 grid-rows-3 mx-auto m-4 bg-teagreen shadow-xl shadow-emerald-900  text-center content-center rounded-xl">
                 <!--First Row-->
-                <div class="flex items-center justify-center text-2xl shadow-lg">1</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">2</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">3</div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    1
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    2
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">3</div>
+           
+            
                 <!--Second Row-->
-                <div class="flex items-center justify-center text-2xl shadow-lg">4</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">5</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">6</div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    4
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    5
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">6</div>
+           
+            
                 <!--Third Row-->
-                <div class="flex items-center justify-center text-2xl shadow-lg">7</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">8</div>
-                <div class="flex items-center justify-center text-2xl shadow-lg">9</div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    7
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    8
+                </div>
+                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">9</div>
             </div>
         <!--Win or Loss Component-->
-
+            <div id="gameResult" class="w-5/6 h-6 flex items-center justify-center mt-4">
+                 <h3 id="result" class="">You Win!</h3>
+            </div>
         <!--Restart Game Button-->
+            <div id="restartGameBtn" class="w-5/6 h-6 flex items-center justify-center mt-4">
+                <button type="button" class="rounded-xl w-24 h-10 bg-slate-800 text-slate-100">
+                    <h3 id="" class="">RESET</h3>
+                </button>
+            </div>
         </main>
+    <script src="node_modules/jquery/dist/jquery.js"></script>    
     <script src="app.js"></script>
     </body>
 </html>
