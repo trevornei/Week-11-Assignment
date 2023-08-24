@@ -597,12 +597,44 @@ video {
   height: 83.333333%;
 }
 
+.h-1\/4 {
+  height: 25%;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
 .w-screen {
   width: 100vw;
 }
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .grid-cols-3 {
@@ -676,6 +708,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .shadow {
