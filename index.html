@@ -22,33 +22,39 @@
             <!--This container uses css grid(3cols & 3rows)-->
             <div id="board" class="w-5/6 h-1/2 grid grid-cols-3 grid-rows-3 mx-auto m-4 bg-teagreen shadow-xl shadow-emerald-900  text-center content-center rounded-xl">
                 <!--First Row-->
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    1
+                <div data-index="1" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    2
+                <div data-index="2" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">3</div>
+                <div data-index="3" class="cell flex items-center justify-center text-2xl shadow-lg">
+
+                </div>
            
             
                 <!--Second Row-->
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    4
+                <div data-index="4" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    5
+                <div data-index="5" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">6</div>
+                <div data-index="6" class="cell flex items-center justify-center text-2xl shadow-lg">
+                    
+                </div>
            
             
                 <!--Third Row-->
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    7
+                <div data-index="7" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
-                    8
+                <div data-index="8" class="cell flex items-center justify-center text-2xl shadow-lg border-e-slate-950">
+                    
                 </div>
-                <div id="cell" class="flex items-center justify-center text-2xl shadow-lg">9</div>
+                <div data-index="9" class="cell flex items-center justify-center text-2xl shadow-lg">
+
+                </div>
             </div>
         <!--Win or Loss Component-->
             <div id="gameResult" class="w-5/6 h-6 flex items-center justify-center mt-4">
@@ -57,7 +63,7 @@
         <!--Restart Game Button-->
             <div id="restartGameBtn" class="w-5/6 h-6 flex items-center justify-center mt-4">
                 <button type="button" class="rounded-xl w-24 h-10 bg-slate-800 text-slate-100">
-                    <h3 id="" class="">RESET</h3>
+                    <h3 data-index="" class="">RESET</h3>
                 </button>
             </div>
         </main>
