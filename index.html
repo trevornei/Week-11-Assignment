@@ -9,14 +9,15 @@
     <!--The main container that houses the game.-->
     <main class="flex flex-col items-center justify-center w-2/3 h-5/6 bg-ashgray rounded-3xl">
     <!--Game Title-->
-        <div class="">
+        <div id="header" class="">
             <h1 class="">Tic Tac Toe</h1>
         </div>
     <!--Who's Turn?-->
-        <div class="">
+        <div id="player-turn" class="">
             <h4 class="">Player Turn</h4>
         </div>
     <!--Tailwind Grid: Game Tiles-->
+        <!--This container uses css grid(3cols & 3rows)-->
         <div id="board" class="grid grid-cols-3 grid-rows-3 gap-3 mx-auto p-4 bg-teagreen shadow-emerald-900">
             <!--First Row-->
             <div class="cell">1</div>
