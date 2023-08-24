@@ -9,16 +9,16 @@
     <!--The main container that houses the game.-->
     <main class="flex flex-col items-center justify-center w-2/3 h-5/6 bg-ashgray rounded-3xl">
     <!--Game Title-->
-        <div id="header" class="w-full h-20 text-center">
-            <h1 class="">Tic Tac Toe</h1>
+        <div id="header" class="w-5/6 h-20 text-center">
+            <h1 class="text-4xl">Tic Tac Toe</h1>
         </div>
     <!--Who's Turn?-->
-        <div id="player-turn" class="w-full h-20 text-center">
-            <h4 class="">Player Turn</h4>
+        <div id="player-turn" class="w-5/6 h-20 text-center">
+            <h4 class="text-xl">Player Turn</h4>
         </div>
     <!--Tailwind Grid: Game Tiles-->
         <!--This container uses css grid(3cols & 3rows)-->
-        <div id="board" class="w-full h-1/2 grid grid-cols-3 grid-rows-3 gap-3 mx-auto p-4 bg-teagreen shadow-emerald-900 text-center content-center">
+        <div id="board" class="w-5/6 h-1/2 grid grid-cols-3 grid-rows-3 gap-3 mx-auto p-4 m-4 bg-teagreen shadow-emerald-900 text-center content-center rounded-xl">
             <!--First Row-->
             <div class="flex items-center justify-center">1</div>
             <div class="flex items-center justify-center">2</div>
@@ -32,8 +32,9 @@
             <div class="flex items-center justify-center">8</div>
             <div class="flex items-center justify-center">9</div>
         </div>
+    <!--Win or Loss Component-->
+
     <!--Restart Game Button-->
-    <!--Win or Loss Component-->    
     </main>
 <script src="app.js"></script>
 </body>
