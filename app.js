@@ -2,6 +2,11 @@ const board = $('#board');
 let currentPlayer = "X";
 let activeGame = true;
 
+function resetGame() {
+    // Select cell and use .text() to enter nothing.
+    $('.cell').text("");
+}
+
 /*
     Select the document object, use the .ready() method to select each cell, and add an eventlisener of click.
 */
