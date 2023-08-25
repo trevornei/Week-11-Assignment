@@ -60,9 +60,7 @@ $(document).ready(function () {
         currentPlays[currentPlayer].push(parseInt($(this).attr('data-index')))
         if (isWinner()) {
             alert('Winner: ' + currentPlayer);
-        }
-
-        if (isDraw()) {
+        } else if (isDraw()) {
             alert(`Draw!`);
         }
         // Toggles current player with ternary operator
@@ -71,6 +69,10 @@ $(document).ready(function () {
 
     })
 })
+
+function isDraw() {
+    return numPlays === 8;
+}
 
 let isWinner = () => {
     if (numPlays < 3) {
