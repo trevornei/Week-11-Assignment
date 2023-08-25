@@ -25,15 +25,7 @@ const winningPositions = [
 ];
 
 // Iterate over the array.
-for (let i = 0; i < winningPositions.length; i++) {
-    let isWinner = true;
-    for ( let j = 0; j < winningPositions.lenth; j++) {
-        if ($.inArray(winningPositions[i][j], currentPlays[currentPlayer]) < 0) {
-            isWinner = false;
-            break;
-        }
-    }
-}
+
 
 console.table(winningPositions)
 
@@ -59,25 +51,44 @@ $(document).ready(function () {
     // Tracks moves of each player
     let moves = { 'X': [], 'O': [] };
     // Tracks the number of moves that have occured. 
-    numPlays++
     // Select the divs with class="cell"
     $('.cell').on('click', function () {
         // this refers to the divs with class="cell" 
         // .text() method returns the selected element and all of it's decendents as a string. 
         $(this).text(currentPlayer);
         // Records the move...
-        moves[currentPlayer].push(parseInt($(this).attr('data-index')))
+        currentPlays[currentPlayer].push(parseInt($(this).attr('data-index')))
+        if (isWinner()) {
+            alert('Winner: ' + currentPlayer);
+        }
+
+        if (isDraw()) {
+            alert(`Draw!`);
+        }
         // Toggles current player with ternary operator
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+        numPlays++
 
-        if (isWinner) {
-            document.attr('div')
-        }
     })
 })
 
 let isWinner = () => {
-    if (numPlays < 5) {
-        return;
+    if (numPlays < 3) {
+        return false;
     }
+
+    for (let i = 0; i < winningPositions.length; i++) {
+        let win = true;
+        for (let j = 0; j < winningPositions[i].length; j++) {
+            if ($.inArray(winningPositions[i][j], currentPlays[currentPlayer]) < 0) {
+                win = false;
+                break;
+            }
+        }
+    
+        if (win) 
+            return true;
+    }
+
+    return false;
 }
