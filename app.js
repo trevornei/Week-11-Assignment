@@ -53,6 +53,13 @@ function displayMessage(message) {
 // document object is selected
 // .ready() is a method that is loaded before the website is displayed to the user.
 $(document).ready(function () {
+    // Select the button for restart game.
+    // Create a click event
+    $('#restartGameBtn button').on('click', function() {
+    // Call resetGame() function.
+        resetGame()
+    })
+    
     // Tracks moves of each player
     let moves = { 'X': [], 'O': [] };
     // Tracks the number of moves that have occured. 
