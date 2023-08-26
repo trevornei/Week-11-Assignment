@@ -2,6 +2,7 @@
 # Week-11-Assignment
 Tic Tac Toe Game
 
+NOTE: I used Tailwind CSS and JQuery to make this program.
 
 #Assignment Requirements
     -Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.

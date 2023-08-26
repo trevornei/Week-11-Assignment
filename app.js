@@ -1,4 +1,4 @@
-giconst board = $('#board');
+const board = $('#board');
 let currentPlayer = "X";
 let activeGame = true;
 
@@ -45,6 +45,7 @@ $(document).ready(function () {
     // Tracks the number of moves that have occured. 
     // Select the divs with class="cell"
     $('.cell').on('click', function () {
+        $('#turn').text(currentPlayer + 's turn.')
         // this refers to the divs with class="cell" 
         // .text() method returns the selected element and all of it's decendents as a string. 
         $(this).text(currentPlayer);
