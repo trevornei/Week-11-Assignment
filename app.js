@@ -32,15 +32,8 @@ const winningPositions = [
     [3, 5, 7]
 ];
 
-// Iterate over the array.
-
-
-console.table(winningPositions)
-
-console.log(currentPlays)
-
 // document object is selected
-// .ready() is a method that is loaded before the website is displayed to the user.
+// .ready() is a method that makes sure the following code does not run before the DOM is fully loaded.
 $(document).ready(function () {
     // Select the button for restart game.
     // Create a click event
