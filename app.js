@@ -36,20 +36,6 @@ console.table(winningPositions)
 
 console.log(currentPlays)
 
-// Create a function that creates a message.
-function displayMessage(message) {
-    // New div that contains the message "You Won!" or "You Loose!"
-    const messageDiv = $('<div></div>')
-        .addClass('fixed inset-0 flex items center justify-center z-10 w-2/12 h-auto bg-teagreen text-2xl text-black')
-        .text(message);
-
-    $('body').append(messageDiv);
-
-    //Blur the main content
-    $('main').addClass('blur');
-}
-
-
 // document object is selected
 // .ready() is a method that is loaded before the website is displayed to the user.
 $(document).ready(function () {
@@ -71,9 +57,9 @@ $(document).ready(function () {
         // Records the move...
         currentPlays[currentPlayer].push(parseInt($(this).attr('data-index')))
         if (isWinner()) {
-            alert('Winner: ' + currentPlayer);
+            win();
         } else if (isDraw()) {
-            alert(`Draw!`);
+            draw();
         }
         // Toggles current player with ternary operator
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
@@ -82,8 +68,16 @@ $(document).ready(function () {
     })
 })
 
+function draw() {
+    $("#result").text('Draw!');
+}
+
 function isDraw() {
     return numPlays === 8;
+}
+
+function win() {
+    $("#result").text(currentPlayer + ' Won!!!');
 }
 
 let isWinner = () => {
